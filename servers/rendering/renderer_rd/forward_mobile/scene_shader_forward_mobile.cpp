@@ -329,9 +329,11 @@ void SceneShaderForwardMobile::ShaderData::set_code(const String &p_code) {
 
 					if (k == SHADER_VERSION_COLOR_PASS || k == SHADER_VERSION_COLOR_PASS_MULTIVIEW || k == SHADER_VERSION_LIGHTMAP_COLOR_PASS || k == SHADER_VERSION_LIGHTMAP_COLOR_PASS_MULTIVIEW) {
 						blend_state = blend_state_blend;
+						/*
 						if (depth_draw == DEPTH_DRAW_OPAQUE && !uses_alpha_clip) {
 							depth_stencil.enable_depth_write = false; //alpha does not draw depth
 						}
+						*/
 					} else if (k == SHADER_VERSION_SHADOW_PASS || k == SHADER_VERSION_SHADOW_PASS_MULTIVIEW || k == SHADER_VERSION_SHADOW_PASS_DP) {
 						//none, blend state contains nothing
 					} else if (k == SHADER_VERSION_DEPTH_PASS_WITH_MATERIAL) {
